@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Rectangle Perimeter</title>
+</head>
+<style>body {
+      font-family: Arial, sans-serif;
+      background-color: #fabdbd;
+      text-align: center;
+      padding: 50px;}
+
+      input {
+      padding: 10px;
+      margin: 10px;
+      width: 200px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
+      color:blueviolet
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 20px;
+      color: green;
+    }
+</style>
+<body>
+   <h1>Rectangle Perimeter Calculator</h1>
+  <input type="number" id="length" placeholder="Enter length">
+  <input type="number" id="breadth" placeholder="Enter breadth">
+  <br/>
+  <br/>
+  <button onclick="calculatePerimeter()">Calculate Perimeter</button>
+  <p id="result"></p>
+
+  <script>
+    function calculatePerimeter() {
+      var length = parseFloat(document.getElementById("length").value);
+      var breadth = parseFloat(document.getElementById("breadth").value);
+      var perimeter = 2 * (length + breadth);
+      document.getElementById("result").innerText = "Perimeter: " + perimeter;
+    }
+  </script>
+</body>
+</html>
